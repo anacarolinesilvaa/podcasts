@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sejá bem vindo!</title>
+
+    <!-- Meu CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/podcast.css">
+    <!-- Meu JS -->
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Bem vindo ao Podcast!!</h1>
+
+        <p>Email do usuário: <span id="user-email"></span></p>
+        <p>Nome do usuário: <span id="user-name"></span></p>
+
+        <!-- Botão para ir para o PodCast 1 -->
+        <a href="podcast.html" class="button">PodCast 1</a>
+
+        <!-- Botão para ir para o PodCast 2 -->
+        <a href="podcast2.html" class="button">PodCast 2</a>
+
+        <!-- Botão para ir para o PodCast 3 -->
+        <a href="podcast3.html" class="button">PodCast 3</a>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const userEmail = localStorage.getItem('userEmail');
+                if (userEmail) {
+                    document.getElementById('user-email').textContent = userEmail;
+                } else {
+                    document.getElementById('user-email').textContent = 'Não encontrado';
+                }
+
+                const userName = localStorage.getItem('userName');
+                if (userName) {
+                    document.getElementById('user-name').textContent = userName;
+                } else {
+                    document.getElementById('user-name').textContent = 'Não encontrado';
+                }
+            });
+        </script>
+    </div>
+
+
+</body>
+
+</html>
